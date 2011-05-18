@@ -7,6 +7,20 @@ http://mail.gnome.org/mailman/listinfo/snowy-list.
 Please report bugs using https://bugzilla.gnome.org/
 (https://bugzilla.gnome.org/enter_bug.cgi?product=snowy).
 
+Version 0.7 "Old English Sheepdog"
+
+* Improve login page look and error handling (#637614)
+* Source local_settings instead of importing from it
+* Prefer bundled python libs when system copies exist (#638149)
+* Add new 'manage.py check' command (#638326)
+* Show username in note breadcrumb if request.user != author (#625231)
+* Support hiding note and notebook template notes
+* Clicking a notebook name now takes you to a list of all notes (#613884)
+* Fix the longstanding python 2.7 bug (#638480)
+* Make openid_complete view csrf_exempt
+* Add Jeff and Leon as a maintainers (#645471)
+* Set correct content-type for OAuth responses (#650073)
+
 Version 0.6.1 "Jagdterrier.1"
 * Re-apply mysql fix for django_openid_auth
 
