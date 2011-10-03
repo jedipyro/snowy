@@ -34,7 +34,7 @@
                 <td id="header-auth">
                     {% if user.is_authenticated %}
                     <h3>
-                        {{ user }}
+                        <a href="{% url note_index user.username %}">{{ user }}</a>
                     </h3>
                     <p><a href="{% url preferences %}">{% trans "preferences" %}</a> / <a href="{% url django.contrib.auth.views.logout %}">{% trans "log out" %}</a></p>
                     {% else %}
@@ -44,7 +44,7 @@
                 </td>
                 <td id="header-avatar">
                     {% if user.is_authenticated %}
-                    <a href="{% url notes.views.note_index user.username %}">{% gravatar_img_for_user user 64 %}</a>
+                    <a href="{% url note_index user.username %}">{% gravatar_img_for_user user 64 %}</a>
                     {% endif %}
                 </td>
             </tr>
