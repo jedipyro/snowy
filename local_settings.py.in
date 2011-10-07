@@ -1,16 +1,25 @@
-# Local Django settings for snowy project.
+import os
 
+# Local Django settings for snowy project.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-DATABASE_ENGINE = 'sqlite3'    # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'snowy.db'  # Or path to database file if using sqlite3.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(os.path.dirname(__file__), "snowy.db"),
+#        'USER': '',            # Not used with sqlite3.
+#        'PASSWORD': '',        # Not used with sqlite3.
+#        'HOST': '',            # Set to empty string for localhost. Not used with sqlite3.
+#        'PORT': ''             # Set to empty string for default. Not used with sqlite3.
+    }
+}
 
 # Fill in this information from
 # http://recaptcha.net/api/getkey?app=snowy
-RECAPTCHA_ENABLED = False
-RECAPTCHA_PUBLIC_KEY = ''
-RECAPTCHA_PRIVATE_KEY = ''
+#RECAPTCHA_ENABLED = False
+#RECAPTCHA_PUBLIC_KEY = ''
+#RECAPTCHA_PRIVATE_KEY = ''
 
 EMAIL_PORT = 1025
 
