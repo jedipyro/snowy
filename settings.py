@@ -94,8 +94,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.csrf.middleware.CsrfViewMiddleware',
-    'django.contrib.csrf.middleware.CsrfResponseMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
