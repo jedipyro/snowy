@@ -32,11 +32,10 @@
     margin-bottom: 5px;
     /*padding: 3px 3px 3px 30px;*/
     padding: 3px 3px 3px 3px;
-    
     border: 1px solid #bababa;
-    border-radius: 5px; 
+    border-radius: 5px;
     /* TODO convert the search bar image to fit in with the white layout */
-    /* background: url('/site_media/img/search.png') center left no-repeat; */
+    /* background: url('../img/search.png') center left no-repeat; */
 }
 
 #sidebar input#search.dim {
@@ -75,12 +74,12 @@
 }
 
 .note-item {
-    list-style-image: url('/site_media/img/note_16.png'); 
+    list-style-image: url('../img/note_16.png');
     padding-right: 12px;
 }
 
 .note-pinned {
-    list-style-image: url('/site_media/img/pin-down_16.png'); 
+    list-style-image: url('../img/pin-down_16.png');
 }
 
 .note-selected {
@@ -107,7 +106,7 @@
 }
 
 #new-note {
-    list-style-image: url('/site_media/img/note-new_16.png'); 
+    list-style-image: url('../img/note-new_16.png');
 }
 
 #sidebar-notebook-list {
@@ -116,6 +115,6 @@
 }
 
 #sidebar-notebook-list .notebook-item {
-    list-style-image: url('/site_media/img/notebook_16.png'); 
+    list-style-image: url('../img/notebook_16.png');
 }
 
