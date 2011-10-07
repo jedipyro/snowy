@@ -12,6 +12,7 @@
 <h1>Tell {{ site.name }} about yourself!</h1>
 
 <form method="POST">
+    {% csrf_token %}
     <p>
       <label for="username" class="registration-form-label">{{ form.username.label }}:</label>
       {{ form.username }}

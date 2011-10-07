@@ -9,6 +9,7 @@
 <h3>{% trans "Log in" %}</h3>
 
 <form method="post" action=".">
+{% csrf_token %}
 <table>
 <tr>
     <td>{{ form.username.label_tag }}</td>
