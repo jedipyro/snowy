@@ -24,7 +24,7 @@
 <h1>{% trans "Preferences" %}</h1>
 {% if user.has_usable_password %}
 <h3>{% trans "Change your password" %}</h3>
-<form method="POST">
+<form method="POST">{% csrf_token %}
     <table class="input-form">
     {{ password_form.as_table }}
         <tfoot>
@@ -41,7 +41,7 @@
 {% endif %}
 
 <h3>{% trans "Change your Email address" %}</h3>
-<form method="POST">
+<form method="POST">{% csrf_token %}
     <table class="input-form">
     {{ email_form.as_table }}
         <tfoot>
@@ -57,7 +57,7 @@
 </form>
 
 <h3>{% trans "Internationalization" %}</h3>
-<form method="POST">
+<form method="POST">{% csrf_token %}
     <table class="input-form">
     {{ i18n_form.as_table }}
         <tfoot>
@@ -73,7 +73,7 @@
 </form>
 
 <h3>{% trans "OpenID Accounts" %}</h3>
-<form method="POST">
+<form method="POST">{% csrf_token %}
     <table class="input-form">
         <tr>
             <th>
