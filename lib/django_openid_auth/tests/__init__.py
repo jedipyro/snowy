@@ -1,6 +1,6 @@
 # django-openid-auth -  OpenID integration for django.contrib.auth
 #
-# Copyright (C) 2009 Canonical Ltd.
+# Copyright (C) 2009-2010 Canonical Ltd.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -27,11 +27,14 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 import unittest
+from test_views import *
+from test_store import *
+from test_auth import *
 
 
 def suite():
     suite = unittest.TestSuite()
-    for name in ['test_store', 'test_views']:
+    for name in ['test_auth', 'test_store', 'test_views']:
         mod = __import__('%s.%s' % (__name__, name), {}, {}, ['suite'])
         suite.addTest(mod.suite())
     return suite
