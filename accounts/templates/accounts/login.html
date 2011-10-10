@@ -64,7 +64,7 @@
         <input type="button" id="openid-provider-username-submit" value="{% trans "Log in" %}">
     </div>
 
-    <form style="display: none" id="openid-login-form" name="fopenid" action="{% url openid-login %}" method="post">
+    <form style="display: none" id="openid-login-form" name="fopenid" action="{% url openid-login %}" method="post">{% csrf_token %}
         <h3>{% trans "OpenID" %}</h3>
         <b>{{ openid_form.openid_identifier.label_tag }}</b>
         {{ openid_form.openid_identifier }}
