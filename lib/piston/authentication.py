@@ -12,8 +12,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-#TODO: Update to proper 1.2 imports (once we drop 1.1 support)
-from django.contrib.csrf.middleware import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt
 
 from piston import forms
 
@@ -177,6 +176,7 @@ def oauth_auth_view(request, token, callback, params):
     return render_to_response('piston/authorize_token.html',
             { 'form': form }, RequestContext(request))
 
+@csrf_exempt
 @login_required
 def oauth_user_auth(request):
     oauth_server, oauth_request = initialize_server_request(request)
